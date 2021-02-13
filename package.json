@@ -1,6 +1,6 @@
 {
   "name": "ngx-simpler-copy",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": {
     "name": "Agung Yuliyanto",
     "email": "agung.96tm@gmail.com",
@@ -17,7 +17,7 @@
     "test": "ng test",
     "lint": "ng lint"
   },
-  "private": true,
+  "license": "MIT",
   "dependencies": {
     "@angular/animations": "~10.1.6",
     "@angular/common": "~10.1.6",
@@ -52,5 +52,12 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  }
+  },
+  "keywords": [
+    "library",
+    "typescript",
+    "angular package",
+    "package",
+    "clipboard"
+  ]
 }

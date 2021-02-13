@@ -1,24 +1,63 @@
-# NgxSimplerCopy
+# Ngx Simpler Copy
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+Just for copy text to clipboard, only that !!!
 
-## Code scaffolding
 
-Run `ng generate component component-name --project ngx-simpler-copy` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-simpler-copy`.
-> Note: Don't forget to add `--project ngx-simpler-copy` or else it will be added to the default project in your `angular.json` file. 
+### how to:
+1. import `NgxSimplerCopyModule`:
+```
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-## Build
+import { AppComponent } from './app.component';
+import { NgxSimplerCopyModule } from 'ngx-simpler-copy';
 
-Run `ng build ngx-simpler-copy` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgxSimplerCopyModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Publishing
+2. use directive or exist function:
+```
+import { Component } from '@angular/core';
+import { simplerCopyText } from 'ngx-simpler-copy';
 
-After building your library with `ng build ngx-simpler-copy`, go to the dist folder `cd dist/ngx-simpler-copy` and run `npm publish`.
+@Component({
+  selector: 'app-root',
+  templates: `
+  <div>
+    <p #mySimpler="simplerCopy" simplerCopy>
+        08111111111111
+    </p>
+    <div>
+        <button (click)="mySimpler.copy('08111111111111')">
+        Copy
+        </button>
+        &nbsp;
+        <button (click)="copyHiThere('Hi, There !!!')">
+        Copy "Hi, There !!!"
+        </button>
+    </div>
+  </div>
+  `,
+  styles: [``]
+})
+export class AppComponent {
+  copyHiThere(text: string): void {
+    simplerCopyText(text);
+  }
+}
 
-## Running unit tests
+```
 
-Run `ng test ngx-simpler-copy` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Contributes:
+- agung96tm ( [github](https://github.com/agung96tm) | [website](https://agung96tm.com/) )
