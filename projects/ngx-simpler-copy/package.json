@@ -1,22 +1,20 @@
 {
-  "name": "ngx-simpler-copy",
-  "version": "0.0.3",
+  "name": "@irshadali/ngx-simpler-copy",
+  "version": "1.0.1",
   "author": {
-    "name": "Agung Yuliyanto",
-    "email": "agung.96tm@gmail.com",
-    "url": "https://agung96tm.com"
+    "name": "Irshad Ali"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:agung96tm/ngx-simpler-copy.git"
+    "url": "git@github.com:irsali/ngx-simpler-copy.git"
   },
   "peerDependencies": {
-    "@angular/common": "^10.1.6",
-    "@angular/core": "^10.1.6"
+    "@angular/common": ">=10.1.6",
+    "@angular/core": ">=10.1.6"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": ">=2.0.0"
   },
   "keywords": [
     "library",

@@ -20,6 +20,9 @@
         "dist/ngx-simpler-copy/ngx-simpler-copy",
         "dist/ngx-simpler-copy"
       ]
-    }
+    },
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true
   }
 }

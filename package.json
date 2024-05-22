@@ -1,6 +1,6 @@
 {
   "name": "ngx-simpler-copy",
-  "version": "0.0.3",
+  "version": "1.0.1",
   "author": {
     "name": "Agung Yuliyanto",
     "email": "agung.96tm@gmail.com",
@@ -15,7 +15,11 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build_lib": "ng build --prod ngx-simpler-copy",
+    "npm_pack": "cd dist/ngx-simpler-copy && npm pack",
+    "package": "npm run build_lib && npm run npm_pack",
+    "publish": "npm run package && cd dist/ngx-simpler-copy && npm publish --access=public"
   },
   "license": "MIT",
   "dependencies": {
